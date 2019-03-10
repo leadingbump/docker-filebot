@@ -47,8 +47,8 @@ RUN true && \
 # Install a specific version for reproducible builds. See this for supported versions:
 # https://launchpad.net/~webupd8team/+archive/ubuntu/java/+packages
 apt-get install -qy 'oracle-java8-installer=8u201-1~webupd8~1'
+apt-get install -qy oracle-java8-set-default
 
-apt-get install -y oracle-java8-set-default
 RUN true && \
 
 # libchromaprint-tools for fpcalc, used to compute AcoustID fingerprints for MP3s.
