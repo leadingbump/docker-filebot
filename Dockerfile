@@ -46,7 +46,7 @@ sed -i 's|J_DIR=jdk1.8.0_151|J_DIR=jdk1.8.0_161|' /var/lib/dpkg/info/oracle-java
 
 # Install a specific version for reproducible builds. See this for supported versions:
 # https://launchpad.net/~webupd8team/+archive/ubuntu/java/+packages
-apt-get install -qy 'oracle-java8-installer=8u161-1~webupd8~0'
+apt-get install -qy 'oracle-java8-installer - 8u201-1~webupd8~1'
 
 RUN true && \
 
