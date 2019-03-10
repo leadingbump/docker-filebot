@@ -39,10 +39,10 @@ apt-get update && \
 
 RUN true && \
 
-sed -i 's|JAVA_VERSION=8u201' /var/lib/dpkg/info/oracle-java8-installer.* && \
-sed -i 's|PARTNER_URL=https://download.oracle.com/otn-pub/java/jdk/8u201-b09/42970487e3af4f5aa5bca3f542482c60/jdk-8u201-linux-x64.tar.gz/' /var/lib/dpkg/info/oracle-java8-installer.* && \
-sed -i 's|SHA256SUM_TGZ="12c745fbb8735bf450b8c6ba6f649bebe19915f05742975e443bdc8566170352"' /var/lib/dpkg/info/oracle-java8-installer.* && \
-sed -i 's|J_DIR=jdk1.8.0_201' /var/lib/dpkg/info/oracle-java8-installer.* && \
+#sed -i 's|JAVA_VERSION=8u201' /var/lib/dpkg/info/oracle-java8-installer.* && \
+#sed -i 's|PARTNER_URL=https://download.oracle.com/otn-pub/java/jdk/8u201-b09/42970487e3af4f5aa5bca3f542482c60/jdk-8u201-linux-x64.tar.gz/' /var/lib/dpkg/info/oracle-java8-installer.* && \
+#sed -i 's|SHA256SUM_TGZ="12c745fbb8735bf450b8c6ba6f649bebe19915f05742975e443bdc8566170352"' /var/lib/dpkg/info/oracle-java8-installer.* && \
+#sed -i 's|J_DIR=jdk1.8.0_201' /var/lib/dpkg/info/oracle-java8-installer.* && \
 
 # Install a specific version for reproducible builds. See this for supported versions:
 # https://launchpad.net/~webupd8team/+archive/ubuntu/java/+packages
