@@ -35,7 +35,7 @@ apt-get update && \
 
 # Fix from https://stackoverflow.com/a/48343372/730300. Download first, let it fail, patch, then try again
 # See also: https://askubuntu.com/questions/998047/how-to-replace-a-faulty-java-installation-with-a-new-one
-( apt-get install -qy 'oracle-java8-installer - 8u201-1~webupd8~1' || true )
+( apt-get install -qy 'oracle-java8-installer=8u201-1~webupd8~1' || true )
 
 RUN true && \
 
@@ -46,7 +46,7 @@ sed -i 's|J_DIR=jdk1.8.0_201|' /var/lib/dpkg/info/oracle-java8-installer.* && \
 
 # Install a specific version for reproducible builds. See this for supported versions:
 # https://launchpad.net/~webupd8team/+archive/ubuntu/java/+packages
-apt-get install -qy 'oracle-java8-installer - 8u201-1~webupd8~1'
+apt-get install -qy 'oracle-java8-installer=8u201-1~webupd8~1'
 
 RUN true && \
 
