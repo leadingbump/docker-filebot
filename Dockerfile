@@ -35,14 +35,14 @@ apt-get update && \
 
 # Fix from https://stackoverflow.com/a/48343372/730300. Download first, let it fail, patch, then try again
 # See also: https://askubuntu.com/questions/998047/how-to-replace-a-faulty-java-installation-with-a-new-one
-( apt-get install -qy 'oracle-java8-installer=8u161-1~webupd8~0' || true )
+( apt-get install -qy 'oracle-java8-installer - 8u201-1~webupd8~1' || true )
 
 RUN true && \
 
-sed -i 's|JAVA_VERSION=8u151|JAVA_VERSION=8u161|' /var/lib/dpkg/info/oracle-java8-installer.* && \
-sed -i 's|PARTNER_URL=http://download.oracle.com/otn-pub/java/jdk/8u151-b12/e758a0de34e24606bca991d704f6dcbf/|PARTNER_URL=http://download.oracle.com/otn-pub/java/jdk/8u161-b12/2f38c3b165be4555a1fa6e98c45e0808/|' /var/lib/dpkg/info/oracle-java8-installer.* && \
-sed -i 's|SHA256SUM_TGZ="c78200ce409367b296ec39be4427f020e2c585470c4eed01021feada576f027f"|SHA256SUM_TGZ="6dbc56a0e3310b69e91bb64db63a485bd7b6a8083f08e48047276380a0e2021e"|' /var/lib/dpkg/info/oracle-java8-installer.* && \
-sed -i 's|J_DIR=jdk1.8.0_151|J_DIR=jdk1.8.0_161|' /var/lib/dpkg/info/oracle-java8-installer.* && \
+sed -i 's|JAVA_VERSION=8u201|' /var/lib/dpkg/info/oracle-java8-installer.* && \
+sed -i 's|PARTNER_URL=https://download.oracle.com/otn-pub/java/jdk/8u201-b09/42970487e3af4f5aa5bca3f542482c60/jdk-8u201-linux-x64.tar.gz/|' /var/lib/dpkg/info/oracle-java8-installer.* && \
+sed -i 's|SHA256SUM_TGZ="12c745fbb8735bf450b8c6ba6f649bebe19915f05742975e443bdc8566170352"|' /var/lib/dpkg/info/oracle-java8-installer.* && \
+sed -i 's|J_DIR=jdk1.8.0_201|' /var/lib/dpkg/info/oracle-java8-installer.* && \
 
 # Install a specific version for reproducible builds. See this for supported versions:
 # https://launchpad.net/~webupd8team/+archive/ubuntu/java/+packages
