@@ -99,7 +99,7 @@ ln -s /var/lib/tomcat7/shared /usr/share/tomcat7/shared && \
 # To find the latest version: https://www.filebot.net/download.php?mode=s&type=deb&arch=amd64
 # We'll use a specific version for reproducible builds
 wget --no-check-certificate -q -O /files/filebot.deb \
-  'https://get.filebot.net/filebot/FileBot_4.8.2/FileBot_4.8.2_amd64.deb' && \
+  'https://get.filebot.net/filebot/FileBot_4.8.5/FileBot_4.8.5_amd64.deb' && \
 dpkg -i /files/filebot.deb && rm /files/filebot.deb && \
 
 # Otherwise RDP rendering of the UI doesn't work right.
