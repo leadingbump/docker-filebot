@@ -1,4 +1,5 @@
 #FROM hurricane/dockergui:x11rdp
+FROM scratch
 #FROM hurricane/dockergui:xvnc
 
 MAINTAINER David Coppit <david@coppit.org>
